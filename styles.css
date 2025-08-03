@@ -1,1 +1,83 @@
-/*  your css code here. If applicable */
+/* General body styling */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+    font-family: sans-serif;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px; /* Increased margin for better spacing */
+    width: 300px; /* Give the progress bar a defined width */
+}
+
+/* Base style for lines */
+.line {
+    flex: 1;
+    height: 4px; /* Make the line thicker */
+    background: #e0e0e0; /* Default grey color for inactive lines */
+    margin: 0 -2px; /* Slight negative margin to overlap with circles for seamless look */
+    transition: background-color 0.4s ease; /* Smooth transition */
+}
+
+/* Active style for lines */
+.line.active {
+    background-color: #3498db; /* Blue color for active lines */
+}
+
+/* Base style for circles */
+.circle {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #e0e0e0; /* Thicker border for inactive circles */
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Use 50% for perfect circles */
+    font-size: 16px;
+    color: #999; /* Grey text for inactive circles */
+    background-color: #fff;
+    transition: all 0.4s ease; /* Smooth transition for changes */
+}
+
+/* Active style for circles */
+.circle.active {
+    background-color: #fff; /* White background for active circles */
+    border-color: #3498db; /* Blue border for active circles */
+    color: #3498db; /* Blue text for active circles */
+    font-weight: bold; /* Make the number bold */
+}
+
+/* Buttons container for better layout */
+.buttons-container {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+    color: #999;
+}
